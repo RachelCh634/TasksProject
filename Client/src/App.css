@@ -1,0 +1,125 @@
+.App {
+  text-align: center;
+  background-image: url(img/notebooks-alarm-clock-paper-reminder-white-background-isolated.jpg);
+  background-size: 100%;
+  height: 100%;
+}
+#span{
+  margin-top: 10%;
+}
+#title1{
+  color: red;
+}
+#title2{
+  color: black;
+  padding-top: 5%;
+}
+.titels{
+  font-weight: bolder;
+}
+.tasks{
+  margin-left: 70%;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+.button{
+  padding-right: 10%;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.btn {
+  position: relative;
+  color: white;
+  width: 100%;
+  height: 49px;
+  line-height: 49px;
+  transition: all 0.3s;
+  background: transparent;
+  border: 0;
+  display: flex;
+  place-content: center;
+  /* font-weight: 300; */
+}
+
+.btn span {
+  transition: all 0.3s;
+  line-height: 1;
+}
+
+.btn10::before, .btn10::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn10:hover::after {
+  animation-name: rotatecw;
+  animation-duration: 2s;
+}
+
+.btn10:hover::before {
+  animation-name: rotateccw;
+  animation-duration: 3s;
+}
+
+.btn10:hover::after, .btn10:hover::before {
+  left: 31%;
+  width: 100px;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotatecw {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(-360deg);
+  }
+}
